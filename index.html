@@ -705,6 +705,210 @@
     <h1>Avaliação Física</h1>
     <p>Baseline visual · Histórico competitivo · Composição corporal</p>
   </div>
+  <div class="chart-box" id="peso-diario" style="margin-bottom:20px;border:1px solid var(--gold);">
+    <h3 style="margin-bottom:4px;">📲 Registro Diário — Peso em Jejum</h3>
+    <p style="color:#9aa0a6;font-size:13px;margin:0 0 16px;line-height:1.5;">Pese-se em jejum ao acordar e registre aqui. Salva neste aparelho e, se configurado, sincroniza no GitHub (histórico acessível de qualquer dispositivo).</p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-bottom:18px;">
+      <div style="display:flex;flex-direction:column;gap:5px;flex:1;min-width:130px;">
+        <label for="bk-data" style="color:#9aa0a6;font-size:12px;">Data</label>
+        <input type="date" id="bk-data" style="background:#0a0a0a;border:1px solid #333;color:var(--text);border-radius:6px;padding:11px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px;flex:1;min-width:130px;">
+        <label for="bk-peso" style="color:#9aa0a6;font-size:12px;">Peso em jejum (kg)</label>
+        <input type="text" inputmode="decimal" id="bk-peso" placeholder="ex: 96,7" style="background:#0a0a0a;border:1px solid #333;color:var(--text);border-radius:6px;padding:11px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      </div>
+      <button id="bk-salvar" style="background:var(--gold);color:#0a0a0a;border:none;border-radius:6px;padding:12px 22px;font-size:15px;font-weight:700;cursor:pointer;min-width:120px;">Registrar</button>
+    </div>
+
+    <div id="bk-stats" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;"></div>
+
+    <canvas id="bk-chart" style="max-height:240px;"></canvas>
+
+    <div style="overflow-x:auto;margin-top:18px;">
+      <table id="bk-tabela" style="width:100%;border-collapse:collapse;font-size:14px;"></table>
+    </div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+      <button id="bk-copiar" style="background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:6px;padding:10px 16px;font-size:14px;font-weight:600;cursor:pointer;">📋 Copiar tabela</button>
+      <button id="bk-json" style="background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:6px;padding:10px 16px;font-size:14px;font-weight:600;cursor:pointer;">⬇ Baixar JSON</button>
+      <button id="bk-csv" style="background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:6px;padding:10px 16px;font-size:14px;font-weight:600;cursor:pointer;">⬇ Baixar CSV</button>
+      <button id="bk-undo" style="background:transparent;color:#9aa0a6;border:1px solid #333;border-radius:6px;padding:10px 16px;font-size:14px;cursor:pointer;">↶ Desfazer último</button>
+    </div>
+
+    <details id="bk-ghbox" style="margin-top:16px;border:1px solid #222;border-radius:6px;padding:12px 14px;background:#0a0a0a;">
+      <summary style="cursor:pointer;color:var(--gold);font-weight:600;font-size:14px;">☁ Sincronizar com GitHub</summary>
+      <div id="bk-ghstatus" style="font-size:12px;color:#9aa0a6;margin:10px 0;">Não configurado.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <input id="gh-owner" placeholder="usuário/org" style="background:#111;border:1px solid #333;color:var(--text);border-radius:6px;padding:9px 10px;font-size:13px;box-sizing:border-box;">
+        <input id="gh-repo" placeholder="repositório" style="background:#111;border:1px solid #333;color:var(--text);border-radius:6px;padding:9px 10px;font-size:13px;box-sizing:border-box;">
+        <input id="gh-branch" placeholder="branch (main)" style="background:#111;border:1px solid #333;color:var(--text);border-radius:6px;padding:9px 10px;font-size:13px;box-sizing:border-box;">
+        <input id="gh-path" placeholder="caminho (peso.json)" style="background:#111;border:1px solid #333;color:var(--text);border-radius:6px;padding:9px 10px;font-size:13px;box-sizing:border-box;">
+      </div>
+      <input id="gh-token" type="password" placeholder="token (github_pat_... ou ghp_...)" style="width:100%;margin-top:8px;background:#111;border:1px solid #333;color:var(--text);border-radius:6px;padding:9px 10px;font-size:13px;box-sizing:border-box;">
+      <p style="font-size:11px;color:#777;margin:8px 0 10px;line-height:1.5;">Token salvo só neste navegador, nunca no código publicado. Crie um <b>fine-grained token</b> com acesso só a este repo → Repository permissions → Contents: Read and write.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button id="gh-save" style="background:var(--gold);color:#0a0a0a;border:none;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;">Salvar e sincronizar</button>
+        <button id="gh-sync" style="background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:6px;padding:9px 14px;font-size:13px;cursor:pointer;">Sincronizar agora</button>
+        <button id="gh-clear" style="background:transparent;color:#9aa0a6;border:1px solid #333;border-radius:6px;padding:9px 14px;font-size:13px;cursor:pointer;">Remover token</button>
+      </div>
+    </details>
+
+    <div id="bk-msg" style="color:var(--gold);font-size:13px;margin-top:10px;min-height:18px;"></div>
+  </div>
+  <hr class="divider">
+  <script>
+  (function(){
+    var KEY='bk_peso_jejum_v1', CFG='bk_gh_cfg', TOK='bk_gh_token', LAST='bk_gh_lastsync';
+    var SEED=[
+      {d:'2026-05-16',p:96.2},{d:'2026-05-19',p:95.6},{d:'2026-05-22',p:96.5},
+      {d:'2026-05-30',p:96.4},{d:'2026-06-04',p:94.8},{d:'2026-06-13',p:96.3},
+      {d:'2026-06-14',p:96.7}
+    ];
+    var chart=null, busy=false;
+    function ls(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+    function lset(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+    function ldel(k){try{localStorage.removeItem(k);}catch(e){}}
+    function load(){var raw=ls(KEY);if(!raw){save(SEED.slice());return SEED.slice();}try{return JSON.parse(raw);}catch(e){return SEED.slice();}}
+    function save(arr){lset(KEY,JSON.stringify(arr));}
+    function fmtBR(iso){var a=iso.split('-');return a[2]+'/'+a[1]+'/'+a[0].slice(2);}
+    function nf(n){return (Math.round(n*10)/10).toFixed(1).replace('.',',');}
+    function mm7(arr,i){var s=0,c=0;for(var k=Math.max(0,i-6);k<=i;k++){s+=arr[k].p;c++;}return s/c;}
+    function sortd(arr){arr.sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0;});return arr;}
+    function msg(t){var m=document.getElementById('bk-msg');if(m){m.textContent=t;setTimeout(function(){if(m.textContent===t)m.textContent='';},4000);}}
+
+    function render(){
+      var arr=sortd(load());
+      var stEl=document.getElementById('bk-stats');
+      if(arr.length){
+        var last=arr[arr.length-1],prev=arr.length>1?arr[arr.length-2]:null;
+        var delta=prev?(last.p-prev.p):0,avg=mm7(arr,arr.length-1),net=last.p-arr[0].p;
+        var card=function(l,v,c){return '<div style="flex:1;min-width:120px;background:#0a0a0a;border:1px solid #222;border-radius:6px;padding:12px 14px;"><div style="color:#9aa0a6;font-size:11px;text-transform:uppercase;letter-spacing:.5px;">'+l+'</div><div style="color:'+(c||'var(--text)')+';font-size:22px;font-weight:700;margin-top:3px;">'+v+'</div></div>';};
+        var dc=delta>0?'var(--green)':(delta<0?'var(--red)':'#9aa0a6');
+        var nc=net>0?'var(--green)':(net<0?'var(--red)':'#9aa0a6');
+        stEl.innerHTML=card('Último ('+fmtBR(last.d)+')',nf(last.p)+' kg','var(--gold)')+card('Δ vs anterior',(delta>0?'+':'')+nf(delta)+' kg',dc)+card('Média 7 reg.',nf(avg)+' kg')+card('Net do bloco',(net>0?'+':'')+nf(net)+' kg',nc);
+      } else stEl.innerHTML='<div style="color:#9aa0a6;">Sem registros ainda.</div>';
+      var t=document.getElementById('bk-tabela');
+      var th=function(x,a){return '<th style="text-align:'+a+';padding:8px 10px;border-bottom:1px solid #333;color:#9aa0a6;font-weight:600;">'+x+'</th>';};
+      var h='<thead><tr>'+th('Data','left')+th('Peso (kg)','right')+th('Δ dia','right')+th('Média 7','right')+'</tr></thead><tbody>';
+      for(var i=arr.length-1;i>=0;i--){
+        var d=i>0?(arr[i].p-arr[i-1].p):null;
+        var dc2=d===null?'#555':(d>0?'var(--green)':(d<0?'var(--red)':'#9aa0a6'));
+        var dt=d===null?'—':((d>0?'+':'')+nf(d));
+        h+='<tr><td style="padding:8px 10px;border-bottom:1px solid #1a1a1a;">'+fmtBR(arr[i].d)+'</td><td style="padding:8px 10px;border-bottom:1px solid #1a1a1a;text-align:right;font-weight:600;color:var(--gold);">'+nf(arr[i].p)+'</td><td style="padding:8px 10px;border-bottom:1px solid #1a1a1a;text-align:right;color:'+dc2+';">'+dt+'</td><td style="padding:8px 10px;border-bottom:1px solid #1a1a1a;text-align:right;color:#9aa0a6;">'+nf(mm7(arr,i))+'</td></tr>';
+      }
+      t.innerHTML=h+'</tbody>';
+      drawChart(arr);
+    }
+    function drawChart(arr){
+      var cv=document.getElementById('bk-chart');
+      if(!cv||typeof Chart==='undefined')return;
+      if(cv.offsetParent===null||cv.offsetWidth===0){setTimeout(function(){drawChart(sortd(load()));},600);return;}
+      var labels=arr.map(function(x){return fmtBR(x.d);});
+      var peso=arr.map(function(x){return x.p;});
+      var med=arr.map(function(x,i){return Math.round(mm7(arr,i)*100)/100;});
+      if(chart){chart.data.labels=labels;chart.data.datasets[0].data=peso;chart.data.datasets[1].data=med;chart.update();return;}
+      chart=new Chart(cv,{type:'line',data:{labels:labels,datasets:[{label:'Peso jejum (kg)',data:peso,borderColor:'#c9a84c',backgroundColor:'rgba(201,168,76,.12)',tension:.3,fill:true,pointRadius:3},{label:'Média 7 reg.',data:med,borderColor:'#6b7280',borderDash:[5,4],tension:.3,fill:false,pointRadius:0}]},options:{responsive:true,plugins:{legend:{labels:{color:'#9aa0a6'}}},scales:{y:{ticks:{color:'#9aa0a6'},grid:{color:'rgba(255,255,255,.06)'}},x:{ticks:{color:'#9aa0a6'},grid:{color:'rgba(255,255,255,.06)'}}}}});
+    }
+
+    function addEntry(){
+      var di=document.getElementById('bk-data'),pi=document.getElementById('bk-peso');
+      var d=di.value,p=parseFloat((pi.value||'').trim().replace(',','.'));
+      if(!d){msg('Escolha a data.');return;}
+      if(isNaN(p)||p<40||p>200){msg('Peso inválido.');return;}
+      var arr=load(),found=false;
+      for(var i=0;i<arr.length;i++){if(arr[i].d===d){arr[i].p=p;found=true;break;}}
+      if(!found)arr.push({d:d,p:p});
+      save(sortd(arr));pi.value='';render();
+      msg((found?'Atualizado ':'Registrado ')+fmtBR(d)+': '+nf(p)+' kg');
+      if(ghCfg()&&ghTok())syncNow();
+    }
+
+    function toMarkdown(){var arr=sortd(load());var s='| Data | Peso (kg) | Média 7 |\n|---|---|---|\n';for(var i=0;i<arr.length;i++)s+='| '+fmtBR(arr[i].d)+' | '+nf(arr[i].p)+' | '+nf(mm7(arr,i))+' |\n';return s;}
+    function copyMd(){var s=toMarkdown();if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(s).then(function(){msg('Tabela copiada.');},function(){fb(s);});else fb(s);}
+    function fb(s){var ta=document.createElement('textarea');ta.value=s;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');msg('Tabela copiada.');}catch(e){msg('Copie manualmente.');}document.body.removeChild(ta);}
+    function dl(name,content,type){var b=new Blob([content],{type:type});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u);}
+    function dlJson(){dl('peso.json',JSON.stringify(sortd(load()),null,2),'application/json');msg('JSON baixado — pode commitar no repo.');}
+    function dlCsv(){var arr=sortd(load());var s='data,peso_kg,media_7\n';for(var i=0;i<arr.length;i++)s+=arr[i].d+','+arr[i].p+','+(Math.round(mm7(arr,i)*100)/100)+'\n';dl('peso_jejum_bruno.csv',s,'text/csv');msg('CSV baixado.');}
+    function undo(){var arr=sortd(load());if(!arr.length){msg('Nada para desfazer.');return;}var r=arr.pop();save(arr);render();msg('Removido '+fmtBR(r.d)+'.');if(ghCfg()&&ghTok())syncNow();}
+
+    // ---------- GitHub sync ----------
+    function ghCfg(){try{return JSON.parse(ls(CFG));}catch(e){return null;}}
+    function ghTok(){return ls(TOK);}
+    function ghStatus(t,c){var e=document.getElementById('bk-ghstatus');if(e){e.textContent=t;e.style.color=c||'#9aa0a6';}}
+    function b64e(s){return btoa(unescape(encodeURIComponent(s)));}
+    function b64d(s){return decodeURIComponent(escape(atob((s||'').replace(/\n/g,''))));}
+    function apiUrl(c){return 'https://api.github.com/repos/'+c.owner+'/'+c.repo+'/contents/'+encodeURIComponent(c.path).replace(/%2F/g,'/');}
+    function hdrs(){return {'Authorization':'Bearer '+ghTok(),'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};}
+    function mergeArr(a,b){var m={},o=[],i;for(i=0;i<a.length;i++)m[a[i].d]=a[i].p;for(i=0;i<b.length;i++)m[b[i].d]=b[i].p;for(var k in m)if(m.hasOwnProperty(k))o.push({d:k,p:m[k]});return sortd(o);}
+    function getRemote(c){
+      return fetch(apiUrl(c)+'?ref='+encodeURIComponent(c.branch),{headers:hdrs()}).then(function(r){
+        if(r.status===404)return {sha:null,arr:[]};
+        if(r.status===401||r.status===403)throw new Error('Token sem permissão ('+r.status+')');
+        if(!r.ok)throw new Error('GitHub '+r.status);
+        return r.json().then(function(j){var arr=[];try{arr=JSON.parse(b64d(j.content));}catch(e){}return {sha:j.sha,arr:arr};});
+      });
+    }
+    function syncNow(){
+      var c=ghCfg();if(!c||!ghTok()){ghStatus('Não configurado.');return;}
+      if(busy)return;busy=true;ghStatus('Sincronizando…','var(--gold)');
+      getRemote(c).then(function(rem){
+        var merged=mergeArr(rem.arr,load());
+        save(merged);render();
+        var body={message:'peso jejum '+new Date().toISOString().slice(0,16),content:b64e(JSON.stringify(merged,null,2)),branch:c.branch};
+        if(rem.sha)body.sha=rem.sha;
+        return fetch(apiUrl(c),{method:'PUT',headers:hdrs(),body:JSON.stringify(body)}).then(function(r){
+          if(!r.ok)return r.json().then(function(j){throw new Error((j&&j.message)||('PUT '+r.status));});
+          var now=new Date();lset(LAST,now.toISOString());
+          ghStatus('✓ Sincronizado '+('0'+now.getHours()).slice(-2)+':'+('0'+now.getMinutes()).slice(-2)+' ('+merged.length+' registros)','var(--green)');
+        });
+      }).catch(function(e){ghStatus('✗ '+e.message,'var(--red)');}).then(function(){busy=false;});
+    }
+    function saveCfg(){
+      var owner=document.getElementById('gh-owner').value.trim();
+      var repo=document.getElementById('gh-repo').value.trim();
+      var branch=document.getElementById('gh-branch').value.trim()||'main';
+      var path=document.getElementById('gh-path').value.trim()||'peso.json';
+      var tok=document.getElementById('gh-token').value.trim();
+      if(!owner||!repo){ghStatus('Preencha usuário e repositório.','var(--red)');return;}
+      if(!tok&&!ghTok()){ghStatus('Cole o token.','var(--red)');return;}
+      lset(CFG,JSON.stringify({owner:owner,repo:repo,branch:branch,path:path}));
+      if(tok){lset(TOK,tok);document.getElementById('gh-token').value='';}
+      syncNow();
+    }
+    function clearTok(){ldel(TOK);ldel(CFG);ghStatus('Token e config removidos deste aparelho.');}
+    function prefill(){
+      var c=ghCfg();
+      var host=(typeof location!=='undefined'&&location.hostname)||'';
+      var seg=((typeof location!=='undefined'&&location.pathname)||'').split('/').filter(Boolean);
+      var go=document.getElementById('gh-owner'),gr=document.getElementById('gh-repo'),gb=document.getElementById('gh-branch'),gp=document.getElementById('gh-path');
+      if(c){go.value=c.owner;gr.value=c.repo;gb.value=c.branch;gp.value=c.path;}
+      else{
+        if(/\.github\.io$/.test(host)){go.value=host.split('.')[0];gr.value=seg.length?seg[0]:host;}
+        gb.value='main';gp.value='peso.json';
+      }
+      if(c&&ghTok()){var last=ls(LAST);ghStatus(last?('Configurado · última sync '+new Date(last).toLocaleString()):'Configurado.','#9aa0a6');}
+    }
+
+    function init(){
+      var di=document.getElementById('bk-data');
+      if(di&&!di.value){var t=new Date();di.value=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2);}
+      document.getElementById('bk-salvar').onclick=addEntry;
+      var pi=document.getElementById('bk-peso');if(pi)pi.addEventListener('keydown',function(e){if(e.key==='Enter')addEntry();});
+      document.getElementById('bk-copiar').onclick=copyMd;
+      document.getElementById('bk-json').onclick=dlJson;
+      document.getElementById('bk-csv').onclick=dlCsv;
+      document.getElementById('bk-undo').onclick=undo;
+      document.getElementById('gh-save').onclick=saveCfg;
+      document.getElementById('gh-sync').onclick=syncNow;
+      document.getElementById('gh-clear').onclick=clearTok;
+      prefill();render();
+      if(ghCfg()&&ghTok())syncNow();
+    }
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+  })();
+  </script>
+
 
   <!-- S4 — 13/06/2026 -->
   <h3>S4 — 13/06/2026 · Overall Gym · 5 fotos celebration · 96,3 kg jejum</h3>
