@@ -572,7 +572,7 @@
   <div class="sidebar-logo">
     <div class="name">Bruno Katsuki</div>
     <div class="sub">Men's Physique &middot; NPC</div>
-    <div class="updated">Atualizado: <strong>03/10/2026</strong> &middot; plano de treino de 30/09 em vigor</div>
+    <div class="updated">Atualizado: <strong>05/10/2026</strong> &middot; treino: proposta de 05/10 para avalia&ccedil;&atilde;o do Matta</div>
   </div>
   <nav>
     <a onclick="show('perfil', this)"><span class="ico">👤</span> Perfil do Atleta</a>
@@ -612,8 +612,8 @@
       <span class="badge badge-green">✅ Dentro do teto</span>
     </div>
     <div class="status-card" onclick="openDetail('treino')">
-      <div><div class="eixo">Treino &middot; plano Matta (30/09)</div><div class="estado"><strong>Plano novo em vigor desde 30/09:</strong> split semanal A B C D E F, 6 dias, 40 exerc&iacute;cios, 150 s&eacute;ries/sem, <strong>aer&oacute;bico 45 min/dia</strong>. Perna volta ao plano: 25 s&eacute;ries no treino D. Deltoide 38 s&eacute;ries/sem em 2 exposi&ccedil;&otilde;es (A e E).</div><div class="hint">Plano anterior (02/09): 175 s&eacute;ries/sem, perna 0, cardio 60 min/dia &middot; toque para detalhar</div></div>
-      <span class="badge badge-green">✅ Vigente</span>
+      <div><div class="eixo">Treino &middot; proposta 05/10</div><div class="estado"><strong>Proposta para avalia&ccedil;&atilde;o do Matta</strong>, base no plano de 30/09: A B C D E F, 6 dias, 42 exerc&iacute;cios, 152 s&eacute;ries/sem. Prioridades: deltoides, largura dorsal, bra&ccedil;os. Delt lateral 17 &rarr; 24 s&eacute;ries (3&times;), dorsal 19 &rarr; 25 (2&times;). Saem encolhimento e eleva&ccedil;&atilde;o frontal.</div><div class="hint">Plano 30/09: ~150 s&eacute;ries/sem, pernas 27 &middot; toque para detalhar</div></div>
+      <span class="badge badge-gold">⏳ Proposta</span>
     </div>
     <div class="status-card" style="border-color:rgba(220,38,38,.3);" onclick="openDetail('dieta')">
       <div><div class="eixo">Dieta e ritmo do cut</div><div class="estado">🔴 Plano novo caiu de ~3.200 para <strong>~2.800 kcal</strong> sem sinalização · <strong>gordura em 0,60 g/kg</strong> (era 0,70) · P 2,32 · C 3,47 g/kg. Somado a cardio 60 min + T3 + clembuterol: <strong>1,64–1,77 kg/sem</strong>.</div><div class="hint">🔴 <strong>Necessário: 0,60–0,66 kg/sem. Projeção do pacote: 83–84 kg em 04/10</strong> — 6 a 7 kg abaixo de Londrina. Segurar 3.200 kcal e cardio em 30 min — toque para detalhar</div></div>
@@ -1906,11 +1906,11 @@
 <section id="treino" class="section active">
   <div class="section-header">
     <h1>Treino</h1>
-    <p id="treino-subtitle">Plano Matta &middot; 30/09/2026 &middot; A B C D E F &middot; 6 dias/semana &middot; 40 exerc&iacute;cios &middot; 150 s&eacute;ries/semana</p>
+    <p id="treino-subtitle">Proposta 05/10/2026 para avalia&ccedil;&atilde;o do Matta &middot; base: plano de 30/09 &middot; A B C D E F &middot; 6 dias/semana &middot; 42 exerc&iacute;cios &middot; 152 s&eacute;ries/semana</p>
   </div>
 
   <div id="ciclo-hoje" style="background:rgba(201,168,76,.10);border:1px solid rgba(201,168,76,.35);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--gold);margin-bottom:10px;"></div>
-  <div style="font-size:11px;color:var(--text3);line-height:1.6;margin-bottom:16px;">Split fixo por dia da semana: <strong>SEG A &middot; TER B &middot; QUA C &middot; QUI D &middot; SEX E &middot; S&Aacute;B F &middot; DOM off</strong>. Descanso por exerc&iacute;cio indicado em cada linha (&#9201;). Aer&oacute;bico prescrito: <strong>45 min todos os dias</strong>. T&eacute;cnicas avan&ccedil;adas: <strong>rest-pause, drop-set e ponto zero</strong>. M&aacute;xima cad&ecirc;ncia e progress&atilde;o de cargas controlada.</div>
+  <div style="font-size:11px;color:var(--text3);line-height:1.6;margin-bottom:16px;">Prioridades: <strong>1. Deltoides &middot; 2. Largura dorsal &middot; 3. Volume de bra&ccedil;os</strong>. Split fixo por dia da semana: <strong>SEG A &middot; TER B &middot; QUA C &middot; QUI D &middot; SEX E &middot; S&Aacute;B F &middot; DOM off</strong>. Saem encolhimento e eleva&ccedil;&atilde;o frontal. Descanso por exerc&iacute;cio indicado em cada linha (&#9201;). Aer&oacute;bico: <strong>45 min todos os dias</strong>. T&eacute;cnicas: <strong>rest-pause, drop-set e ponto zero</strong>.</div>
 
   <div class="day-tabs" id="day-tabs">
     <button class="day-tab" data-day="1" onclick="showDay(1)"><span class="dt-code">A</span><span class="dt-name">seg</span></button>
@@ -1923,16 +1923,15 @@
   </div>
 
   <div class="treino-day" id="td-1">
-    <div class="td-header"><div><div class="td-code">A &middot; segunda</div><div class="td-title">DELTOIDES COMPLETO (ÊNFASE LATERAL E POSTERIOR) &amp; TRÍCEPS</div><div class="td-meta">7 exercícios &middot; 26 séries &middot; deltoide 19 &middot; tríceps 7</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">A</span></div>
-    <div style="font-size:11px;color:var(--text3);margin:0 0 10px;">Foco na largura clavicular em V-Taper de Men's Physique. Alta densidade.</div>
+    <div class="td-header"><div><div class="td-code">A &middot; segunda</div><div class="td-title">OMBRO + TR&Iacute;CEPS</div><div class="td-meta">7 exerc&iacute;cios &middot; 26 s&eacute;ries &middot; deltoide 19 &middot; tr&iacute;ceps 7</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">A</span></div>
     <div class="ex-list">
-      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Elevação lateral máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Última série com drop-set duplo</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Desenvolvimento no Smith</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Deltoide &middot; Cargas pesadas, controle na fase excêntrica</div></div><div class="ex-vol">4 &times; 8–10</div></div>
-      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Elevação lateral na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Execução unilateral com pico de contração de 2 s</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Crucifixo inverso na máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Rest-pause de 10 s na última série</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Face pull com corda na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Foco em deltoide posterior e manguito</div></div><div class="ex-vol">3 &times; 15</div></div>
-      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Tríceps corda</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Tríceps &middot; Drop-set na última série</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Tríceps testa pegada pronada</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Tríceps &middot; Alongamento máximo da cabeça longa</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Elevação lateral máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt lateral &middot; Drop-set duplo na última</div></div><div class="ex-vol">4 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Desenvolvimento no Smith</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Deltoide</div></div><div class="ex-vol">4 &times; 8–10</div></div>
+      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Elevação lateral na polia, unilateral</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt lateral &middot; Pico de 2 s</div></div><div class="ex-vol">4 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Crucifixo inverso na máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt posterior &middot; Rest-pause na última</div></div><div class="ex-vol">4 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Face pull com corda</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt posterior</div></div><div class="ex-vol">3 &times; 15</div></div>
+      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Tríceps corda</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Tríceps &middot; Drop-set na última</div></div><div class="ex-vol">4 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Tríceps francês na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Tríceps</div></div><div class="ex-vol">3 &times; 10–12</div></div>
     </div>
     <div class="td-after">
       <div class="td-after-item">🏃 Aeróbico 45 min</div>
@@ -1940,16 +1939,15 @@
   </div>
 
   <div class="treino-day" id="td-2" style="display:none;">
-    <div class="td-header"><div><div class="td-code">B &middot; terça</div><div class="td-title">DORSAL (LARGURA DE COSTAS E V-TAPER) &amp; ABDOME</div><div class="td-meta">7 exercícios &middot; 27 séries &middot; dorsal 19 &middot; abdômen 8</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">B</span></div>
-    <div style="font-size:11px;color:var(--text3);margin:0 0 10px;">Priorizar expansão dorsal e contração máxima para o shape Men's Physique.</div>
+    <div class="td-header"><div><div class="td-code">B &middot; terça</div><div class="td-title">DORSAL LARGURA + B&Iacute;CEPS + ABDOME</div><div class="td-meta">7 exerc&iacute;cios &middot; 25 s&eacute;ries &middot; dorsal 15 &middot; b&iacute;ceps 6 &middot; abdome 4</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">B</span></div>
     <div class="ex-list">
-      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Barra fixa pronada</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Dorsal &middot; Repetições com peso corporal ou sobrecarga controlada</div></div><div class="ex-vol">4 &times; 8–10</div></div>
-      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Puxador pela frente pegada aberta</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Dorsal &middot; Rest-pause na última série</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Remada articulada fechada</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Dorsal &middot; Puxada focada na porção média e baixa de dorsais</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Meadows row</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Dorsal &middot; Execução controlada unilateral</div></div><div class="ex-vol">3 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Pulldown na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Dorsal &middot; Pico de contração de 2 s embaixo</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Abdominal infra na barra</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Abdômen &middot; Controle estrito da pelve sem balanço</div></div><div class="ex-vol">4 &times; 15–20</div></div>
-      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Abdominal supra na máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Abdômen &middot; Contração máxima do abdome no final da flexão</div></div><div class="ex-vol">4 &times; 15–20</div></div>
+      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Barra fixa pronada</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Dorsal</div></div><div class="ex-vol">4 &times; 8–10</div></div>
+      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Puxador pela frente, pegada aberta</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Dorsal &middot; Rest-pause na última</div></div><div class="ex-vol">4 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Pulldown na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Dorsal &middot; Pico de 2 s</div></div><div class="ex-vol">4 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Meadows row</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Dorsal</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Rosca inclinada com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Bíceps</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Rosca martelo com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Bíceps</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Abdominal infra na barra</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Abdome</div></div><div class="ex-vol">4 &times; 15–20</div></div>
     </div>
     <div class="td-after">
       <div class="td-after-item">🏃 Aeróbico 45 min</div>
@@ -1957,16 +1955,15 @@
   </div>
 
   <div class="treino-day" id="td-3" style="display:none;">
-    <div class="td-header"><div><div class="td-code">C &middot; quarta</div><div class="td-title">PEITORAL (ÊNFASE SUPERIOR) &amp; BÍCEPS</div><div class="td-meta">7 exercícios &middot; 24 séries &middot; peitoral 17 &middot; bíceps 7</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">C</span></div>
-    <div style="font-size:11px;color:var(--text3);margin:0 0 10px;">Construção de clavicular densa e bíceps com pico pronunciado.</div>
+    <div class="td-header"><div><div class="td-code">C &middot; quarta</div><div class="td-title">PEITO SUPERIOR + DELT LATERAL + TR&Iacute;CEPS</div><div class="td-meta">7 exerc&iacute;cios &middot; 25 s&eacute;ries &middot; peito 14 &middot; delt lateral 4 &middot; tr&iacute;ceps 7</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">C</span></div>
     <div class="ex-list">
-      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Supino inclinado com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Peitoral &middot; Banco a 30 graus, máxima amplitude</div></div><div class="ex-vol">4 &times; 8–10</div></div>
-      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Supino inclinado no Smith</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Peitoral &middot; Última série com rest-pause</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Supino reto com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Peitoral &middot; Cadência 3010</div></div><div class="ex-vol">3 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Crucifixo inclinado no cabo</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Peitoral &middot; Foco na parte superior do peitoral</div></div><div class="ex-vol">3 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Crossover</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Peitoral &middot; Drop-set duplo na série final</div></div><div class="ex-vol">3 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Rosca direta com barra</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Bíceps &middot; Execução estrita sem roubo na lombar</div></div><div class="ex-vol">4 &times; 8–10</div></div>
-      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Rosca martelo com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Bíceps &middot; Para braquial e braquiorradial</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Supino inclinado com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Peito</div></div><div class="ex-vol">4 &times; 8–10</div></div>
+      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Supino inclinado no Smith</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Peito &middot; Rest-pause na última</div></div><div class="ex-vol">4 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Crucifixo inclinado no cabo</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Peito</div></div><div class="ex-vol">3 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Crossover</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Peito &middot; Drop-set duplo na última</div></div><div class="ex-vol">3 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Elevação lateral com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt lateral</div></div><div class="ex-vol">4 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Supino fechado</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Tríceps</div></div><div class="ex-vol">4 &times; 8–10</div></div>
+      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Tríceps unilateral na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 0:45</span> &middot; Tríceps</div></div><div class="ex-vol">3 &times; 15</div></div>
     </div>
     <div class="td-after">
       <div class="td-after-item">🏃 Aeróbico 45 min</div>
@@ -1974,15 +1971,15 @@
   </div>
 
   <div class="treino-day" id="td-4" style="display:none;">
-    <div class="td-header"><div><div class="td-code">D &middot; quinta</div><div class="td-title">MEMBROS INFERIORES COMPLETO &amp; PANTURRILHAS</div><div class="td-meta">6 exercícios &middot; 25 séries &middot; quadríceps 12 &middot; posterior 8 &middot; panturrilha 5</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">D</span></div>
-    <div style="font-size:11px;color:var(--text3);margin:0 0 10px;">Treino focado em condicionamento estético de pernas e densidade muscular.</div>
+    <div class="td-header"><div><div class="td-code">D &middot; quinta</div><div class="td-title">PERNAS + ABDOME</div><div class="td-meta">7 exerc&iacute;cios &middot; 25 s&eacute;ries &middot; pernas 21 &middot; abdome 4</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">D</span></div>
     <div class="ex-list">
-      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Cadeira extensora</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Quadríceps &middot; Pré-exaustão com pico de contração</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Agachamento hack</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Quadríceps &middot; Descida profunda e cadenciada</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Leg press 45°</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Quadríceps &middot; Pés alinhados na largura dos ombros</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Cadeira flexora</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Posterior &middot; Drop-set na última série</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Stiff com barra livre</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Posterior &middot; Manter tensão contínua nos isquiotibiais</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Panturrilha em pé</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 0:45</span> &middot; Panturrilha &middot; Pausa de 2 s no alongamento embaixo</div></div><div class="ex-vol">5 &times; 15–20</div></div>
+      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Cadeira extensora</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Quadríceps</div></div><div class="ex-vol">3 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Agachamento hack</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Quadríceps</div></div><div class="ex-vol">4 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Leg press 45°</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Quadríceps</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Cadeira flexora</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Posterior &middot; Drop-set na última</div></div><div class="ex-vol">4 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Stiff com barra</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Posterior</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Panturrilha em pé</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 0:45</span> &middot; Panturrilha</div></div><div class="ex-vol">4 &times; 15–20</div></div>
+      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Abdominal supra na máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Abdome</div></div><div class="ex-vol">4 &times; 15–20</div></div>
     </div>
     <div class="td-after">
       <div class="td-after-item">🏃 Aeróbico 45 min</div>
@@ -1990,15 +1987,15 @@
   </div>
 
   <div class="treino-day" id="td-5" style="display:none;">
-    <div class="td-header"><div><div class="td-code">E &middot; sexta</div><div class="td-title">DELTOIDES (ÊNFASE LATERAL E FRONTAL) &amp; TRAPÉZIO</div><div class="td-meta">6 exercícios &middot; 23 séries &middot; deltoide 19 &middot; trapézio 4</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">E</span></div>
-    <div style="font-size:11px;color:var(--text3);margin:0 0 10px;">Segundo estímulo de ombros na semana para máxima hipertrofia e arredondamento 3D.</div>
+    <div class="td-header"><div><div class="td-code">E &middot; sexta</div><div class="td-title">OMBRO + B&Iacute;CEPS</div><div class="td-meta">7 exerc&iacute;cios &middot; 26 s&eacute;ries &middot; deltoide 19 &middot; b&iacute;ceps 7</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">E</span></div>
     <div class="ex-list">
-      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Elevação lateral com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Execução perfeita, subindo até a linha dos ombros</div></div><div class="ex-vol">5 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Desenvolvimento máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Deltoide &middot; Carga progressiva com técnica de ponto zero</div></div><div class="ex-vol">4 &times; 8–10</div></div>
-      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Elevação lateral na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Tensão mecânica contínua por trás do tronco</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Elevação frontal com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Elevação frontal neutra com halter</div></div><div class="ex-vol">3 &times; 12</div></div>
-      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Elevação Y (Y-raise)</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Deltoide &middot; Banco inclinado enfatizando deltoide e trapézio inferior</div></div><div class="ex-vol">3 &times; 15</div></div>
-      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Encolhimento de ombros</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Trapézio &middot; Pausa de 2 s no topo da contração</div></div><div class="ex-vol">4 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Elevação lateral com halteres</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt lateral</div></div><div class="ex-vol">5 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Desenvolvimento na máquina</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:30</span> &middot; Deltoide &middot; Ponto zero</div></div><div class="ex-vol">4 &times; 8–10</div></div>
+      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Elevação lateral na polia, cabo por trás do corpo</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt lateral</div></div><div class="ex-vol">4 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Elevação em Y no banco inclinado</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt lateral</div></div><div class="ex-vol">3 &times; 15</div></div>
+      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Crucifixo inverso no cabo</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Delt posterior</div></div><div class="ex-vol">3 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Rosca Scott com barra</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Bíceps</div></div><div class="ex-vol">4 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Rosca na polia com o braço atrás do corpo</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Bíceps &middot; Drop-set na última</div></div><div class="ex-vol">3 &times; 12–15</div></div>
     </div>
     <div class="td-after">
       <div class="td-after-item">🏃 Aeróbico 45 min</div>
@@ -2006,16 +2003,15 @@
   </div>
 
   <div class="treino-day" id="td-6" style="display:none;">
-    <div class="td-header"><div><div class="td-code">F &middot; sábado</div><div class="td-title">BRAÇOS COMPLETOS (BÍCEPS E TRÍCEPS) &amp; ABDOME</div><div class="td-meta">7 exercícios &middot; 25 séries &middot; tríceps 11 &middot; bíceps 8 &middot; antebraço 3 &middot; abdômen 3</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">F</span></div>
-    <div style="font-size:11px;color:var(--text3);margin:0 0 10px;">Super-séries antagônicas para pump extremo e densidade nos braços.</div>
+    <div class="td-header"><div><div class="td-code">F &middot; sábado</div><div class="td-title">DORSAL 2 + BRA&Ccedil;OS + ABDOME</div><div class="td-meta">7 exerc&iacute;cios &middot; 25 s&eacute;ries &middot; dorsal 10 &middot; b&iacute;ceps 6 &middot; tr&iacute;ceps 6 &middot; abdome 3</div></div><span class="badge badge-gold" style="font-size:12px;align-self:flex-start;">F</span></div>
     <div class="ex-list">
-      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Supino para tríceps</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Tríceps &middot; Pegada fechada focando nas três cabeças do tríceps</div></div><div class="ex-vol">4 &times; 8–10</div></div>
-      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Rosca Scott com barra</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Bíceps &middot; Alongamento completo na fase excêntrica</div></div><div class="ex-vol">4 &times; 10–12</div></div>
-      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Tríceps francês na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Tríceps &middot; Foco na cabeça longa</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Rosca direta na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Bíceps &middot; Drop-set duplo na última série</div></div><div class="ex-vol">4 &times; 12–15</div></div>
-      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Tríceps unilateral na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 0:45</span> &middot; Tríceps &middot; Execução contínua sem descanso entre braços</div></div><div class="ex-vol">3 &times; 15</div></div>
-      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Rosca inversa na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Antebraço &middot; Hipertrofia de antebraço e braquiorradial</div></div><div class="ex-vol">3 &times; 15</div></div>
-      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Prancha abdominal</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Abdômen &middot; Isometria máxima mantendo o core ativado</div></div><div class="ex-vol">3 &times; falha</div></div>
+      <div class="ex-row"><span class="ex-num">1</span><div class="ex-info"><div class="ex-name">Remada articulada fechada</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Dorsal</div></div><div class="ex-vol">4 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">2</span><div class="ex-info"><div class="ex-name">Puxada unilateral na polia alta</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Dorsal &middot; Alongamento completo no topo</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">3</span><div class="ex-info"><div class="ex-name">Pullover na polia</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Dorsal</div></div><div class="ex-vol">3 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">4</span><div class="ex-info"><div class="ex-name">Rosca direta com barra</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:15</span> &middot; Bíceps</div></div><div class="ex-vol">3 &times; 8–10</div></div>
+      <div class="ex-row"><span class="ex-num">5</span><div class="ex-info"><div class="ex-name">Tríceps acima da cabeça com halter</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Tríceps</div></div><div class="ex-vol">3 &times; 10–12</div></div>
+      <div class="ex-row"><span class="ex-num">6</span><div class="ex-info"><div class="ex-name">Superset: rosca inversa na polia + tríceps corda</div><div class="ex-note"><span style="color:var(--gold);">&#9201; 1:00</span> &middot; Bíceps + tríceps</div></div><div class="ex-vol">3 &times; 15 + 3 &times; 12–15</div></div>
+      <div class="ex-row"><span class="ex-num">7</span><div class="ex-info"><div class="ex-name">Prancha</div><div class="ex-note">Abdome</div></div><div class="ex-vol">3 &times; falha</div></div>
     </div>
     <div class="td-after">
       <div class="td-after-item">🏃 Aeróbico 45 min</div>
@@ -2030,27 +2026,26 @@
   </div>
 
   <h3 style="margin-top:26px;">Volume semanal por grupo</h3>
-  <div style="font-size:11px;color:var(--text3);margin:-6px 0 12px;">S&eacute;ries por semana, cada treino executado uma vez. Coluna de compara&ccedil;&atilde;o: plano pr&eacute;contest de 02/09/2026.</div>
+  <div style="font-size:11px;color:var(--text3);margin:-6px 0 12px;">S&eacute;ries diretas por semana. Compara&ccedil;&atilde;o com o plano Matta de 30/09/2026.</div>
   <div class="tbl-wrap mb-24">
     <table>
-      <thead><tr><th>Grupo</th><th>Plano 30/09</th><th>Plano 02/09</th><th>Dias</th></tr></thead>
+      <thead><tr><th>Grupo</th><th>Plano 30/09</th><th>Novo</th><th>Frequ&ecirc;ncia</th></tr></thead>
       <tbody>
-        <tr><td style="font-weight:600;">Deltoide</td><td><strong>38</strong></td><td>59</td><td>A &middot; E</td></tr>
-        <tr><td style="font-weight:600;">Dorsal</td><td><strong>19</strong></td><td>31</td><td>B</td></tr>
-        <tr><td style="font-weight:600;">Peitoral</td><td><strong>17</strong></td><td>19</td><td>C</td></tr>
-        <tr><td style="font-weight:600;">Tríceps</td><td><strong>18</strong></td><td>11</td><td>A &middot; F</td></tr>
-        <tr><td style="font-weight:600;">Bíceps</td><td><strong>15</strong></td><td>11</td><td>C &middot; F</td></tr>
-        <tr><td style="font-weight:600;">Abdômen</td><td><strong>11</strong></td><td>29</td><td>B &middot; F</td></tr>
-        <tr><td style="font-weight:600;">Quadríceps</td><td><strong>12</strong></td><td>0</td><td>D</td></tr>
-        <tr><td style="font-weight:600;">Posterior de coxa</td><td><strong>8</strong></td><td>0</td><td>D</td></tr>
-        <tr><td style="font-weight:600;">Panturrilha</td><td><strong>5</strong></td><td>7</td><td>D</td></tr>
-        <tr><td style="font-weight:600;">Trapézio</td><td><strong>4</strong></td><td>4</td><td>E</td></tr>
-        <tr><td style="font-weight:600;">Antebraço</td><td><strong>3</strong></td><td>4</td><td>F</td></tr>
-        <tr><td style="font-weight:700;">Total</td><td><strong>150</strong></td><td>175</td><td>6 dias</td></tr>
+        <tr><td style="font-weight:600;">Delt lateral (inclui Y)</td><td>17</td><td><strong>24</strong></td><td>3&times;</td></tr>
+        <tr><td style="font-weight:600;">Delt posterior</td><td>7</td><td><strong>10</strong></td><td>2&times;</td></tr>
+        <tr><td style="font-weight:600;">Desenvolvimentos</td><td>8</td><td><strong>8</strong></td><td>2&times;</td></tr>
+        <tr><td style="font-weight:600;">Eleva&ccedil;&atilde;o frontal + encolhimento</td><td>7</td><td><strong>0</strong></td><td>&ndash;</td></tr>
+        <tr><td style="font-weight:600;">Dorsal</td><td>19</td><td><strong>25</strong></td><td>2&times;</td></tr>
+        <tr><td style="font-weight:600;">B&iacute;ceps (inclui rosca inversa)</td><td>15</td><td><strong>19</strong></td><td>3&times;</td></tr>
+        <tr><td style="font-weight:600;">Tr&iacute;ceps</td><td>18</td><td><strong>20</strong></td><td>3&times;</td></tr>
+        <tr><td style="font-weight:600;">Peito</td><td>17</td><td><strong>14</strong></td><td>1&times;</td></tr>
+        <tr><td style="font-weight:600;">Pernas</td><td>27</td><td><strong>21</strong></td><td>1&times;</td></tr>
+        <tr><td style="font-weight:600;">Abdome</td><td>11</td><td><strong>11</strong></td><td>3&times;</td></tr>
+        <tr><td style="font-weight:700;">Total</td><td>~150</td><td><strong>152</strong></td><td>6 dias</td></tr>
       </tbody>
     </table>
   </div>
-  <div style="font-size:11px;color:var(--text3);line-height:1.7;">Fonte: prescri&ccedil;&atilde;o Team Matta, PDF de 30/09/2026 (PT20260930164748). Plano anterior: prescri&ccedil;&atilde;o pr&eacute;contest de 02/09/2026.</div>
+  <div style="font-size:11px;color:var(--text3);line-height:1.7;">Base: prescri&ccedil;&atilde;o Team Matta, PDF de 30/09/2026 (PT20260930164748). Proposta de 05/10/2026 para avalia&ccedil;&atilde;o do Matta.</div>
 
 </section>
 
@@ -2624,11 +2619,11 @@ function showDay(d) {
   document.querySelectorAll('.day-tab[data-day="'+d+'"]').forEach(function(b) { b.classList.add('active'); });
 }
 
-// Split fixo por dia da semana (plano 30/09/2026): DOM off, SEG A, TER B, QUA C, QUI D, SEX E, SAB F
+// Split fixo por dia da semana (proposta 05/10/2026): DOM off, SEG A, TER B, QUA C, QUI D, SEX E, SAB F
 var SEMANA_MAP  = [0,1,2,3,4,5,6];
 var SEMANA_NOME = ['OFF','A','B','C','D','E','F'];
 var SEMANA_DIA  = ['domingo','segunda-feira','ter&ccedil;a-feira','quarta-feira','quinta-feira','sexta-feira','s&aacute;bado'];
-var SEMANA_FOCO = ['Descanso &middot; aer&oacute;bico 45 min','Deltoides completo e tr&iacute;ceps','Dorsal e abdome','Peitoral superior e b&iacute;ceps','Membros inferiores e panturrilhas','Deltoides lateral e frontal, trap&eacute;zio','Bra&ccedil;os completos e abdome'];
+var SEMANA_FOCO = ['Descanso &middot; aer&oacute;bico 45 min','Ombro e tr&iacute;ceps','Dorsal largura, b&iacute;ceps e abdome','Peito superior, delt lateral e tr&iacute;ceps','Pernas e abdome','Ombro e b&iacute;ceps','Dorsal 2, bra&ccedil;os e abdome'];
 function initTodayTab() {
   var h = new Date(); var w = h.getDay();
   showDay(SEMANA_MAP[w]);
@@ -2641,23 +2636,25 @@ initTodayTab();
 // ── STATUS DETAIL MODAL ──────────────────────────────
 var detailData = {
   treino: {
-    title: 'Treino · plano Matta (30/09/2026)', badge: 'Vigente',
+    title: 'Treino &middot; proposta 05/10/2026', badge: 'Proposta',
     rows: [
-      ['Estrutura','A B C D E F &middot; split semanal fixo &middot; 6 dias/semana &middot; 40 exerc&iacute;cios',''],
-      ['Plano vigente','Team Matta, PDF de 30/09/2026','ok'],
-      ['Volume total','150 s&eacute;ries/semana &middot; cada treino 1&times;/semana',''],
-      ['Deltoide','38 s&eacute;ries/sem em 2 exposi&ccedil;&otilde;es (A &middot; E)',''],
-      ['Dorsal','19 s&eacute;ries/sem (B)',''],
-      ['Peitoral','17 s&eacute;ries/sem (C)',''],
-      ['Tr&iacute;ceps','18 s&eacute;ries/sem (A &middot; F)',''],
-      ['B&iacute;ceps','15 s&eacute;ries/sem (C &middot; F)',''],
-      ['Abd&ocirc;men','11 s&eacute;ries/sem (B &middot; F)',''],
-      ['Perna','quadr&iacute;ceps 12 &middot; posterior 8 &middot; panturrilha 5 (D)',''],
-      ['Trap&eacute;zio &middot; antebra&ccedil;o','4 (E) &middot; 3 (F)',''],
-      ['Aer&oacute;bico','45 min todos os dias',''],
-      ['Plano anterior (02/09)','175 s&eacute;ries/sem &middot; perna 0 &middot; cardio 60 min/dia','']
+      ['Status','Proposta para avalia&ccedil;&atilde;o do Matta, base no plano de 30/09/2026','warn'],
+      ['Prioridades','1. Deltoides &middot; 2. Largura dorsal &middot; 3. Volume de bra&ccedil;os',''],
+      ['Estrutura','A B C D E F &middot; 6 dias/semana &middot; 7 exerc&iacute;cios por dia &middot; 152 s&eacute;ries/semana',''],
+      ['Delt lateral (inclui Y)','24 s&eacute;ries/sem (era 17) &middot; 3&times; (A &middot; C &middot; E)',''],
+      ['Delt posterior','10 (era 7) &middot; 2&times; (A &middot; E)',''],
+      ['Desenvolvimentos','8 &middot; 2&times; (A &middot; E)',''],
+      ['Dorsal','25 (era 19) &middot; 2&times; (B &middot; F)',''],
+      ['B&iacute;ceps','19 (era 15) &middot; 3&times; (B &middot; E &middot; F)',''],
+      ['Tr&iacute;ceps','20 (era 18) &middot; 3&times; (A &middot; C &middot; F)',''],
+      ['Peito','14 (era 17) &middot; 1&times; (C)',''],
+      ['Pernas','21 (era 27) &middot; 1&times; (D)',''],
+      ['Abdome','11 &middot; 3&times; (B &middot; D &middot; F)',''],
+      ['Saem','eleva&ccedil;&atilde;o frontal e encolhimento (7 s&eacute;ries)',''],
+      ['Aer&oacute;bico','45 min todos os dias','']
     ],
-    note: 'T&eacute;cnicas avan&ccedil;adas prescritas: rest-pause, drop-set e ponto zero. M&aacute;xima cad&ecirc;ncia e progress&atilde;o de cargas controlada.'
+    note: 'T&eacute;cnicas: rest-pause, drop-set e ponto zero. Plano vigente at&eacute; a resposta do Matta: 30/09/2026.'
+
   },
   dieta: {
     title: 'Dieta e ritmo do cut', badge: 'Agir',
